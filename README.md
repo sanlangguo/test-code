@@ -1,3 +1,3 @@
 # learn
 Study notes 
-js个人学习笔记
+个人学习笔记
