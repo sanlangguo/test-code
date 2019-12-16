@@ -1,22 +1,13 @@
-var fs = require("fs");
-var data = '菜鸟教程官网地址：www.runoob.com';
+// 输出到终端
+process.stdout.write("Hello World!" + "\n");
 
-// 创建一个可以写入的流，写入到文件 output.txt 中
-var writerStream = fs.createWriteStream('output.txt');
+// 通过参数读取
+// process.argv.forEach(function(val, index, array) {
+//    console.log(index + ': ' + val, array);
+// });
 
-// 使用 utf8 编码写入数据
-writerStream.write(data,'UTF8');
+// 获取执行路径
+console.log(process.execPath,process.argv);
 
-// 标记文件末尾
-writerStream.end();
-
-// 处理流事件 --> data, end, and error
-writerStream.on('finish', function() {
-    console.log("写入完成。");
-});
-
-writerStream.on('error', function(err){
-   console.log(err.stack);
-});
-
-console.log("程序执行完毕");
+// 平台信息
+console.log(process.platform);
